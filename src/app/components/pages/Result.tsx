@@ -6,13 +6,14 @@ import { useAtom } from "jotai";
 import React, { useEffect } from "react";
 
 export default function Result() {
-  const [serchWord] = useAtom<string>(searchWordAtom);
+  const [searchWord] = useAtom<string>(searchWordAtom);
   useEffect(() => {
-    console.log(serchWord);
-  }, [serchWord]);
+    console.log(searchWord);
+  }, [searchWord]);
 
   return (
     <div>
+      <Card />
       <Card />
     </div>
   );

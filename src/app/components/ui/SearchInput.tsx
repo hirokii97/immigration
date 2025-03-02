@@ -5,10 +5,10 @@ import { useAtom } from "jotai";
 import React, { useEffect } from "react";
 
 export default function SearchInput() {
-  const [serchWord, setSearchWord] = useAtom<string>(searchWordAtom);
+  const [searchWord, setSearchWord] = useAtom<string>(searchWordAtom);
   useEffect(() => {
-    console.log(serchWord);
-  }, [serchWord]);
+    console.log(searchWord);
+  }, [searchWord]);
   return (
     <form className="max-w-md mx-auto">
       <label className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">
@@ -35,7 +35,7 @@ export default function SearchInput() {
           className="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           placeholder="都道府県・市町村"
           required
-          value={serchWord}
+          value={searchWord}
           onChange={(e) => setSearchWord(e.target.value)}
         />
         {/* <button

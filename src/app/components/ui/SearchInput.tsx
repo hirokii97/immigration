@@ -2,14 +2,10 @@
 
 import { searchWordAtom } from "@/app/utils/atom";
 import { useAtom } from "jotai";
-import React, { useEffect } from "react";
 
 export default function SearchInput() {
   const [searchWord, setSearchWord] = useAtom<string>(searchWordAtom);
 
-  const handlecCickSearch = (searchWord: string) => {
-    console.log(searchWord);
-  };
   return (
     <div className="relative">
       <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -35,12 +31,6 @@ export default function SearchInput() {
         value={searchWord}
         onChange={(e) => setSearchWord(e.target.value)}
       />
-      <button
-        className="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-        onClick={() => handlecCickSearch(searchWord)}
-      >
-        検索
-      </button>
     </div>
   );
 }

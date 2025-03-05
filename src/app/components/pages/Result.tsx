@@ -1,7 +1,6 @@
 "use client";
 
 import Card from "@/app/components/ui/Card";
-import Margin from "@/app/components/ui/Margin";
 import { getResultData } from "@/app/services/getResultData";
 import { CityType } from "@/app/types/city";
 import { resultsAtom, searchWordAtom } from "@/app/utils/atom";
@@ -18,14 +17,16 @@ export default function Result() {
     setResult(results);
   }, [searchWord]);
   return (
-    <div className="flex flex-wrap gap-6">
+    <div className="flex flex-wrap gap-12 mt-12">
       {results.map((result) => (
         <div key={result.id}>
           <Card
             key={result.id}
             prefecture={result.prefecture}
             municipality={result.municipality}
-            description={result.description}
+            nightlyCost={result.nightlyCost}
+            wifiAvailable={result.wifiAvailable}
+            displayAvailable={result.displayAvailable}
           />
         </div>
       ))}

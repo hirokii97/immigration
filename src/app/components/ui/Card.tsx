@@ -1,8 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import AmenitiesIcon from "@/app/components/ui/AmenitiesIcon";
+import Link from "next/link";
 
 export default function Card(props: {
+  cityId: number;
   prefecture: string;
   municipality: string;
   nightlyCost: number;
@@ -15,9 +17,13 @@ export default function Card(props: {
     nightlyCost,
     wifiAvailable,
     displayAvailable,
+    cityId
   } = props;
   return (
-    <a className="block p-6 rounded-lg max-w-sm bg-white border-grey-200 shadow-sm dark:bg-gray-800">
+    <Link
+      href={`/city/${cityId}`}
+      className="block p-6 rounded-lg max-w-sm bg-white border-grey-200 shadow-sm dark:bg-gray-800"
+    >
       <div className="flex place-content-between">
         <div>
           <h3 className="text-xl font-semibold mb-1">{prefecture}</h3>
@@ -42,6 +48,6 @@ export default function Card(props: {
           <p className="text-xl font-bold">{nightlyCost.toLocaleString()}円~</p>
         </div>
       </div>
-    </a>
+    </Link>
   );
 }

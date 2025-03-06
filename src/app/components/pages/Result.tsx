@@ -22,6 +22,7 @@ export default function Result() {
         <div key={result.id}>
           <Card
             key={result.id}
+            cityId={result.id}
             prefecture={result.prefecture}
             municipality={result.municipality}
             nightlyCost={result.nightlyCost}

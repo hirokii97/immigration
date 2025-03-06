@@ -1,16 +1,53 @@
 import React from "react";
 import Image from "next/image";
+import AmenitiesIcon from "@/app/components/ui/AmenitiesIcon";
+import Link from "next/link";
 
-export default function Card() {
+export default function Card(props: {
+  cityId: number;
+  prefecture: string;
+  municipality: string;
+  nightlyCost: number;
+  wifiAvailable: boolean;
+  displayAvailable: boolean;
+}) {
+  const {
+    prefecture,
+    municipality,
+    nightlyCost,
+    wifiAvailable,
+    displayAvailable,
+    cityId
+  } = props;
   return (
-    <a className="block p-6 rounded-lg max-w-sm bg-wthite border-grey-200 shadow-sm dark:bg-gray-800">
-      <p className="text-xl font-semibold mb-4">北海道****市</p>
-      <div className="image">
-        <Image className="object-cover rounded-xl w-full" src="/dummy1.jpg" alt="image" width={300} height={200} />
+    <Link
+      href={`/city/${cityId}`}
+      className="block p-6 rounded-lg max-w-sm bg-white border-grey-200 shadow-sm dark:bg-gray-800"
+    >
+      <div className="flex place-content-between">
+        <div>
+          <h3 className="text-xl font-semibold mb-1">{prefecture}</h3>
+          <p className="text-sm font-semibold mb-4">{municipality}</p>
+        </div>
+        <div className="flex gap-2">
+          {displayAvailable ? <AmenitiesIcon amenityName="display" /> : null}
+          {wifiAvailable ? <AmenitiesIcon amenityName="wifi" /> : null}
+        </div>
       </div>
-      <p className="text-sm mt-4">
-      この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、
-      </p>
-    </a>
+      <div className="image">
+        <Image
+          className="object-cover rounded-xl w-full"
+          src="/dummy1.jpg"
+          alt="image"
+          width={300}
+          height={200}
+        />
+        <div></div>
+        <div className="mt-2">
+          <p className="text-sm">1泊あたり</p>
+          <p className="text-xl font-bold">{nightlyCost.toLocaleString()}円~</p>
+        </div>
+      </div>
+    </Link>
   );
 }

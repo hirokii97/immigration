@@ -2,9 +2,8 @@ import React from "react";
 
 export default function Header() {
   return (
-    <header>
-      {/* <h1>れっつ！移住体験！</h1> */}
-      <h1>（仮）まとめサイト</h1>
+    <header className="w-full h-15 flex items-center pl-4">
+      <h1 className="font-bold text-xl">そうだ、移住体験にいこう。</h1>
     </header>
   );
 }

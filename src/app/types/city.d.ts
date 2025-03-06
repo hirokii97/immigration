@@ -1,5 +1,5 @@
 export type CityType = {
-  id: number;
+  id: string;
   prefecture: string;
   municipality: string;
   description: string;

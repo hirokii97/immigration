@@ -1,35 +1,36 @@
-"use client";
-
 import React from "react";
 import Image from "next/image";
 import { getDataFromCityId } from "@/app/services/getDataFromCityId";
+import Table from "@/app/city/[cityId]/_componets/Table";
 type Props = {
-  params: { id: number };
+  params: Promise<{ cityId: string }>;
 };
 
-export default function page({ params }: Props) {
-  const data = getDataFromCityId(params.id);
-  console.log(data);
+export default async function page({ params }: Props) {
+  const { cityId } = await params;
+  const city = getDataFromCityId(cityId)[0];
 
   return (
     <div>
-      {/* 写真 */}
-      <Image
-        className="rounded-xl"
-        src="/dummy1.jpg"
-        alt="image"
-        width={300}
-        height={200}
-      />
+      <div>
+        <Image
+          className="rounded-xl object-cover"
+          src="/dummy1.jpg"
+          alt="image"
+          width={300}
+          height={200}
+        />
+      </div>
       {/* こんなとこ */}
       <div>
-        <h3>{}ってこんなとこ</h3>
+        <h3>{city.municipality}市ってどんなとこ？</h3>
+        <p>{city.description}</p>
       </div>
       {/* 表 */}
-      <div></div>
+      <Table city={city} />
       {/* おすすめスポット */}
       <div>
-        <h3>{}のおすすめスポット</h3>
+        <h3>{city.municipality}のおすすめスポット</h3>
       </div>
     </div>
   );

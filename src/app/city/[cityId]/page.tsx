@@ -48,7 +48,7 @@ export default async function page({ params }: Props) {
         </h3>
         <div className="flex gap-2 mt-1">
           {tagsData.map((tagData) => (
-            <div>
+            <div key={tagData}>
               <Tag tagName={tagData} />
             </div>
           ))}

@@ -4,7 +4,7 @@ import AmenitiesIcon from "@/app/components/ui/AmenitiesIcon";
 import Link from "next/link";
 
 export default function Card(props: {
-  cityId: number;
+  cityId: string;
   prefecture: string;
   municipality: string;
   nightlyCost: number;

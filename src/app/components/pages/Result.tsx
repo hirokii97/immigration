@@ -17,7 +17,7 @@ export default function Result() {
     setResult(results);
   }, [searchWord]);
   return (
-    <div className="flex flex-wrap gap-12 mt-12">
+    <div className="flex flex-wrap gap-8 mt-12 place-content-around">
       {results.map((result) => (
         <div key={result.id}>
           <Card

@@ -4,9 +4,8 @@ import Margin from "@/app/components/ui/Margin";
 
 export default function Home() {
   return (
-    <main className="p-6">
+    <main className="m-auto max-w-[1280]">
       <Search />
-      <Margin />
       <Result />
     </main>
   );

@@ -18,7 +18,12 @@
       "localSpecialty": "ジンギスカン",
       "events": "雪まつり、夏祭り",
       "transport": "市営地下鉄・バス網が充実"
-    }
+    },
+    "images": [
+      { "src": "https://picsum.photos/id/15/200/300" },
+      { "src": "https://picsum.photos/id/27/200/300" },
+      { "src": "https://picsum.photos/id/32/200/300" }
+    ]
   },
   {
     "id": "2",
@@ -39,7 +44,13 @@
       "localSpecialty": "リンゴ、ホタテ",
       "events": "ねぶた祭り",
       "transport": "JR、バス"
-    }
+    },
+    "images": [
+      { "src": "https://picsum.photos/id/12/200/300" },
+      { "src": "https://picsum.photos/id/38/200/300" },
+      { "src": "https://picsum.photos/id/24/200/300" },
+      { "src": "https://picsum.photos/id/17/200/300" }
+    ]
   },
   {
     "id": "3",
@@ -60,7 +71,12 @@
       "localSpecialty": "牛タン",
       "events": "七夕祭り",
       "transport": "地下鉄、JR"
-    }
+    },
+    "images": [
+      { "src": "https://picsum.photos/id/29/200/300" },
+      { "src": "https://picsum.photos/id/33/200/300" },
+      { "src": "https://picsum.photos/id/11/200/300" }
+    ]
   },
   {
     "id": "4",
@@ -81,7 +97,14 @@
       "localSpecialty": "うなぎ",
       "events": "伝統祭り",
       "transport": "バス、JR"
-    }
+    },
+    "images": [
+      { "src": "https://picsum.photos/id/40/200/300" },
+      { "src": "https://picsum.photos/id/18/200/300" },
+      { "src": "https://picsum.photos/id/22/200/300" },
+      { "src": "https://picsum.photos/id/36/200/300" },
+      { "src": "https://picsum.photos/id/14/200/300" }
+    ]
   },
   {
     "id": "5",
@@ -102,7 +125,15 @@
       "localSpecialty": "たこ焼き、お好み焼き",
       "events": "祭り、花火大会",
       "transport": "地下鉄、JR、私鉄"
-    }
+    },
+    "images": [
+      { "src": "https://picsum.photos/id/10/200/300" },
+      { "src": "https://picsum.photos/id/25/200/300" },
+      { "src": "https://picsum.photos/id/30/200/300" },
+      { "src": "https://picsum.photos/id/37/200/300" },
+      { "src": "https://picsum.photos/id/20/200/300" },
+      { "src": "https://picsum.photos/id/39/200/300" }
+    ]
   },
   {
     "id": "6",
@@ -113,7 +144,7 @@
     "description": "福岡市は九州地方の玄関口として温暖な気候と豊かな食文化が魅力です。海と山に囲まれた自然環境の中で、屋台や祭りなど地域独自の文化が根付いています。充実した医療・教育施設や交通網が整っており、移住体験プログラムとしても住みやすい環境が高く評価されています。",
     "averageTemperature": 18.0,
     "distanceFromTokyo": 1100,
-    "nightlyCost": 10000,
+    "nightlyCost": 1,
     "wifiAvailable": false,
     "displayAvailable": true,
     "touristAttractions": ["大濠公園", "福岡タワー", "中洲"],
@@ -123,7 +154,13 @@
       "localSpecialty": "明太子、ラーメン",
       "events": "屋台祭り",
       "transport": "地下鉄、バス"
-    }
+    },
+    "images": [
+      { "src": "https://picsum.photos/id/34/200/300" },
+      { "src": "https://picsum.photos/id/16/200/300" },
+      { "src": "https://picsum.photos/id/28/200/300" },
+      { "src": "https://picsum.photos/id/21/200/300" }
+    ]
   },
   {
     "id": "7",
@@ -144,7 +181,12 @@
       "localSpecialty": "ゴーヤチャンプルー",
       "events": "エイサー祭り",
       "transport": "モノレール、バス"
-    }
+    },
+    "images": [
+      { "src": "https://picsum.photos/id/13/200/300" },
+      { "src": "https://picsum.photos/id/31/200/300" },
+      { "src": "https://picsum.photos/id/26/200/300" }
+    ]
   },
   {
     "id": "8",
@@ -165,7 +207,14 @@
       "localSpecialty": "味噌カツ",
       "events": "各種祭り、ショッピングフェア",
       "transport": "地下鉄、JR"
-    }
+    },
+    "images": [
+      { "src": "https://picsum.photos/id/35/200/300" },
+      { "src": "https://picsum.photos/id/19/200/300" },
+      { "src": "https://picsum.photos/id/30/200/300" },
+      { "src": "https://picsum.photos/id/38/200/300" },
+      { "src": "https://picsum.photos/id/12/200/300" }
+    ]
   },
   {
     "id": "9",
@@ -186,10 +235,18 @@
       "localSpecialty": "抹茶スイーツ",
       "events": "伝統工芸体験、祭り",
       "transport": "バス、地下鉄"
-    }
+    },
+    "images": [
+      { "src": "https://picsum.photos/id/23/200/300" },
+      { "src": "https://picsum.photos/id/37/200/300" },
+      { "src": "https://picsum.photos/id/15/200/300" },
+      { "src": "https://picsum.photos/id/32/200/300" },
+      { "src": "https://picsum.photos/id/11/200/300" },
+      { "src": "https://picsum.photos/id/27/200/300" }
+    ]
   },
   {
-    "id": "10",
+    "id": "00010",
     "prefecture": "神奈川県",
     "municipality": "横浜市",
     "prefecture_romaji": "kanagawa",
@@ -207,6 +264,12 @@
       "localSpecialty": "シウマイ",
       "events": "国際花火大会",
       "transport": "JR、私鉄、地下鉄"
-    }
+    },
+    "images": [
+      { "src": "https://picsum.photos/id/14/200/300" },
+      { "src": "https://picsum.photos/id/33/200/300" },
+      { "src": "https://picsum.photos/id/20/200/300" },
+      { "src": "https://picsum.photos/id/36/200/300" }
+    ]
   }
 ]

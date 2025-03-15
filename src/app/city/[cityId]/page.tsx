@@ -1,8 +1,8 @@
 import React from "react";
-import Image from "next/image";
 import { getDataFromCityId } from "@/app/services/getDataFromCityId";
 import Table from "@/app/city/[cityId]/_componets/Table";
 import Tag from "@/app/components/ui/Tag";
+import SliderImage from "@/app/components/ui/SliderImage/SliderImage";
 type Props = {
   params: Promise<{ cityId: string }>;
 };
@@ -17,20 +17,16 @@ export default async function page({ params }: Props) {
     city.additionalInfo.localSpecialty,
   ];
 
+  const images = [...city.images];
+
   return (
     <div className="max-w-[980] m-auto mt-5">
-      <h2 className="text-4xl font-bold mt-3">
+      <h2 className="text-4xl font-bold mt-3 text-center">
         {city.prefecture}
         {city.municipality}
       </h2>
       <div className="mt-6">
-        <Image
-          className="rounded-xl object-cover"
-          src="/dummy1.jpg"
-          alt="image"
-          width={300}
-          height={200}
-        />
+        <SliderImage images={images} />
       </div>
       <div className="mt-8">
         <h3 className="text-2xl font-bold">

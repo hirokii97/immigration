@@ -20,9 +20,10 @@
       "transport": "市営地下鉄・バス網が充実"
     },
     "images": [
-      { "src": "https://picsum.photos/id/15/200/300" },
-      { "src": "https://picsum.photos/id/27/200/300" },
-      { "src": "https://picsum.photos/id/32/200/300" }
+      { "src": "https://images.pexels.com/photos/12847318/pexels-photo-12847318.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
+      { "src": "https://images.pexels.com/photos/6317484/pexels-photo-6317484.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
+      { "src": "https://images.pexels.com/photos/12913422/pexels-photo-12913422.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
+      { "src": "https://images.pexels.com/photos/2806492/pexels-photo-2806492.jpeg?auto=compress&cs=tinysrgb&w=1600" }
     ]
   },
   {
@@ -144,7 +145,7 @@
     "description": "福岡市は九州地方の玄関口として温暖な気候と豊かな食文化が魅力です。海と山に囲まれた自然環境の中で、屋台や祭りなど地域独自の文化が根付いています。充実した医療・教育施設や交通網が整っており、移住体験プログラムとしても住みやすい環境が高く評価されています。",
     "averageTemperature": 18.0,
     "distanceFromTokyo": 1100,
-    "nightlyCost": 1,
+    "nightlyCost": 10000,
     "wifiAvailable": false,
     "displayAvailable": true,
     "touristAttractions": ["大濠公園", "福岡タワー", "中洲"],

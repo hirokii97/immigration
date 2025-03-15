@@ -29,17 +29,17 @@ export default async function page({ params }: Props) {
         <SliderImage images={images} />
       </div>
       <div className="mt-8">
-        <h3 className="text-2xl font-bold">
+        <h3 className="text-2xl font-bold mb-4">
           {city.municipality}ってどんなとこ？
         </h3>
-        <p className="mt-1 leading-8 text-xl">{city.description}</p>
+        <p className="leading-8 text-xl">{city.description}</p>
       </div>
       <div className="mt-8">
         <h3 className="text-2xl font-bold mb-4">基本情報</h3>
         <Table city={city} />
       </div>
       <div className="mt-8">
-        <h3 className="text-2xl font-bold">
+        <h3 className="text-2xl font-bold mb-4">
           {city.municipality}のおすすめスポット
         </h3>
         <div className="flex gap-2 mt-1">

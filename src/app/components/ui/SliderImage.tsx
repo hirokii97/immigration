@@ -14,7 +14,7 @@ export default function SliderImage(props: { images: { src: string }[] }) {
   console.log(images);
   const slideSettings = {
     0: {
-      slidesPerView: 3,
+      slidesPerView: 1,
     },
     1024: {
       slidesPerView: 3,
@@ -26,7 +26,7 @@ export default function SliderImage(props: { images: { src: string }[] }) {
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         breakpoints={slideSettings}
-        centeredSlides={true} // スライドを中央に配置
+        centeredSlides={false} // スライドを中央に配置
         loop={true} // スライドをループさせる
         speed={1000} // スライドが切り替わる時の速度
         autoplay={{
@@ -38,9 +38,11 @@ export default function SliderImage(props: { images: { src: string }[] }) {
           clickable: true,
         }} // ページネーション, クリックで対象のスライドに切り替わる
         className="
-        mt-10
         [&_.swiper-pagination]:!static
-        [&_.swiper-pagination]:m-5
+        [&_.swiper-slide]:!flex
+        [&_.swiper-slide]:!justify-center
+        [&_.swiper-pagination]:mx-auto
+        [&_.swiper-pagination]:mt-5
         [&_.slideImage]:aspect-auto
         "
       >

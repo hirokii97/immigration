@@ -1,8 +1,8 @@
 import React from "react";
 import { getDataFromCityId } from "@/app/services/getDataFromCityId";
-import Table from "@/app/city/[cityId]/_componets/Table";
 import Tag from "@/app/components/ui/Tag";
 import SliderImage from "@/app/components/ui/SliderImage";
+import Table from "@/app/city/[cityId]/components/Table";
 type Props = {
   params: Promise<{ cityId: string }>;
 };

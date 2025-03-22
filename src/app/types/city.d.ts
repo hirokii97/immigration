@@ -1,4 +1,5 @@
 export type CityType = {
+  images: { src: string; }[];
   id: string;
   prefecture: string;
   municipality: string;

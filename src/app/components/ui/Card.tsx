@@ -5,6 +5,7 @@ import Link from "next/link";
 
 export default function Card(props: {
   cityId: string;
+  images: { src: string }[];
   prefecture: string;
   municipality: string;
   nightlyCost: number;
@@ -13,11 +14,12 @@ export default function Card(props: {
 }) {
   const {
     prefecture,
+    images,
     municipality,
     nightlyCost,
     wifiAvailable,
     displayAvailable,
-    cityId
+    cityId,
   } = props;
   return (
     <Link
@@ -37,7 +39,7 @@ export default function Card(props: {
       <div className="image">
         <Image
           className="object-cover rounded-xl w-full"
-          src="/dummy1.jpg"
+          src={images[0].src}
           alt="image"
           width={300}
           height={200}

@@ -4,8 +4,8 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="w-full h-15 flex items-center pl-10 border-b-2 border-gray-100">
-      <Link href="/" className="block flex max-w-[980]">
+    <header className="sticky top-0 z-10 w-full h-15 bg-white/98 flex items-center pl-10">
+      <Link href="/" className="flex max-w-[980]">
         <Image
           className="rounded-xl object-cover"
           src="/icon.svg"

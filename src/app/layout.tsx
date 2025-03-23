@@ -5,6 +5,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
+import { NextAuthProvider } from "@/providers/NextAuth";
 config.autoAddCss = false;
 
 const geistSans = Geist({
@@ -32,9 +33,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header />
-        {children}
-        <Footer />
+        <NextAuthProvider>
+          <Header />
+          {children}
+          <Footer />
+        </NextAuthProvider>
       </body>
     </html>
   );

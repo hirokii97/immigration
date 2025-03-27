@@ -3,11 +3,10 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { signIn, signOut, useSession } from "next-auth/react";
+import { useSession } from "next-auth/react";
 
 export default function Header() {
   const { data: session } = useSession();
-  const isLogin = session ? true : false;
   return (
     <header className="sticky top-0 z-10 w-full h-15 bg-white/98 flex items-center px-10 justify-between">
       <Link href="/" className="flex max-w-[980]">
@@ -22,13 +21,7 @@ export default function Header() {
       </Link>
       <div className="flex items-center gap-3">
         <div>
-          {isLogin ? (
-            <button onClick={() => signOut()}>ログアウト</button>
-          ) : (
-            <button onClick={() => signIn("google", {}, { prompt: "login" })}>
-              Googleでログイン
-            </button>
-          )}
+          <Link href="/account">アカウント</Link>
         </div>
         <div>
           <Image

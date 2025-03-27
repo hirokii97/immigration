@@ -1,6 +1,7 @@
 "use client";
 
 import { signIn, signOut, useSession } from "next-auth/react";
+import Image from "next/image";
 
 export default function Account() {
   const { data: session } = useSession();
@@ -9,7 +10,16 @@ export default function Account() {
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
       {isLogin ? (
         <>
-          <h1 className="text-2xl font-bold mb-4">
+          <div>
+            <Image
+              className="rounded-xl"
+              src={session?.user?.image ?? "/gust_icon.png"}
+              alt="image"
+              width={32}
+              height={32}
+            />
+          </div>
+          <h1 className="text-2xl font-bold my-4">
             {`こんにちは、${session?.user?.name}さん`}
           </h1>
           <div>
@@ -27,9 +37,16 @@ export default function Account() {
         </>
       ) : (
         <>
-          <h1 className="text-2xl font-bold mb-4">
-            ログインしてませんね？
-          </h1>
+          <div>
+            <Image
+              className="rounded-xl"
+              src="/gust_icon.png"
+              alt="image"
+              width={32}
+              height={32}
+            />
+          </div>
+          <h1 className="text-2xl font-bold my-4">こんにちは、ゲストさん</h1>
           <button
             onClick={() => signIn("google", { callbackUrl: "/" })}
             className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"

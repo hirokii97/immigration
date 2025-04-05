@@ -15,11 +15,7 @@ export default function DetailButton(props: Props) {
       onClick={() => setShowModal(!showModal)}
     >
       <GreenButton text={text} />
-      {showModal &&
-        createPortal(
-          <ModalContent onClose={() => setShowModal(!showModal)} />,
-          document.body
-        )}
+      {showModal ? <ModalContent onClose={() => setShowModal(!showModal)} /> : null}
     </div>
   );
 }

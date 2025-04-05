@@ -3,7 +3,6 @@
 import GreenButton from "@/app/components/ui/GreenButton";
 import ModalContent from "@/app/components/ui/ModalContent";
 import React, { useState } from "react";
-import { createPortal } from "react-dom";
 type Props = { text: string };
 
 export default function DetailButton(props: Props) {

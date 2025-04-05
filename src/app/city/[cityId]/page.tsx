@@ -3,6 +3,7 @@ import { getDataFromCityId } from "@/app/services/getDataFromCityId";
 import Tag from "@/app/components/ui/Tag";
 import SliderImage from "@/app/components/ui/SliderImage";
 import Table from "@/app/city/[cityId]/components/Table";
+import DetailButton from "@/app/city/[cityId]/components/DetailButton";
 type Props = {
   params: Promise<{ cityId: string }>;
 };
@@ -49,6 +50,9 @@ export default async function page({ params }: Props) {
             </div>
           ))}
         </div>
+      </div>
+      <div className="mt-8">
+        <DetailButton text={"詳細はこちら"} />
       </div>
     </div>
   );

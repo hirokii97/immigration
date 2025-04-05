@@ -11,7 +11,6 @@ import "swiper/css/pagination";
 
 export default function SliderImage(props: { images: { src: string }[] }) {
   const { images } = props;
-  console.log(images);
   const slideSettings = {
     0: {
       slidesPerView: 1,

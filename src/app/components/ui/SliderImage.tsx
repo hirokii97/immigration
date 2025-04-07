@@ -9,8 +9,14 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-export default function SliderImage(props: { images: { src: string }[] }) {
+type Props = {
+  images: string;
+};
+
+export default function SliderImage(props: Props) {
   const { images } = props;
+  const imageList: { src: string }[] = JSON.parse(images);
+
   const slideSettings = {
     0: {
       slidesPerView: 1,
@@ -45,7 +51,7 @@ export default function SliderImage(props: { images: { src: string }[] }) {
         [&_.slideImage]:aspect-auto
         "
       >
-        {images.map((image) => (
+        {imageList.map((image) => (
           <SwiperSlide key={image.src}>
             <Image
               className="rounded-xl object-cover h-50"

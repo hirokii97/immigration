@@ -10,30 +10,33 @@ type Props = {
 
 export default async function page({ params }: Props) {
   const { cityId } = await params;
-  const city = getDataFromCityId(cityId)[0];
+  const cityData = await getDataFromCityId(cityId);
+  const city = cityData[0];
 
   const tagsData = [
-    ...city.touristAttractions,
-    city.additionalInfo.events,
-    city.additionalInfo.localSpecialty,
+    city?.touristAttractions,
+    city?.additionalInfoEvents,
+    city?.additionalInfoLocalSpecialty,
   ];
 
-  const images = [...city.images];
+  const images = city?.images;
+  console.log(images);
+  
 
   return (
     <div className="max-w-[980] m-auto mt-5">
       <h2 className="text-4xl font-bold mt-3 text-center">
-        {city.prefecture}
-        {city.municipality}
+        {city?.prefecture}
+        {city?.municipality}
       </h2>
       <div className="mt-6">
         <SliderImage images={images} />
       </div>
       <div className="mt-8">
         <h3 className="text-2xl font-bold mb-4">
-          {city.municipality}ってどんなとこ？
+          {city?.municipality}ってどんなとこ？
         </h3>
-        <p className="leading-8 text-xl">{city.description}</p>
+        <p className="leading-8 text-xl">{city?.description}</p>
       </div>
       <div className="mt-8">
         <h3 className="text-2xl font-bold mb-4">基本情報</h3>

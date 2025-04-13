@@ -4,7 +4,7 @@ export default function ModalContent(props: { onClose: any }) {
   const { onClose } = props;
   return (
     <div className="overflow-hidden fixed top-0 right-0 left-0 z-50 bg-gray-400/80 justify-center items-center w-full h-full">
-      <div className="absolute rounded-lg p-4 w-full max-w-md max-h-full bg-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+      <div className="absolute rounded-lg p-4 w-full max-w-md max-h-full bg-white top-1/3 left-1/3">
         <button
           onClick={() => onClose()}
           type="button"

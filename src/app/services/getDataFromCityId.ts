@@ -11,12 +11,8 @@ export const getDataFromCityId = async (cityId: string) => {
   }
   if (city) {
     const filteredData = city.filter((city) => {
-      console.log("city.id", typeof city.id);
-      console.log("cityId", typeof cityId);
-
       return city.id === cityId;
     });
-    console.log("filteredData", filteredData);
     return filteredData;
   } else {
     console.error("No city_data found");

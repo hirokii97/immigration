@@ -12,16 +12,15 @@ export default async function page({ params }: Props) {
   const { cityId } = await params;
   const cityData = await getDataFromCityId(cityId);
   const city = cityData[0];
+  const touristAttractions = city?.touristAttractions.split(",");
 
   const tagsData = [
-    city?.touristAttractions,
+    ...touristAttractions,
     city?.additionalInfoEvents,
     city?.additionalInfoLocalSpecialty,
   ];
 
   const images = city?.images;
-  console.log(images);
-  
 
   return (
     <div className="max-w-[980] m-auto mt-5">
@@ -47,8 +46,8 @@ export default async function page({ params }: Props) {
           {city.municipality}のおすすめスポット
         </h3>
         <div className="flex gap-2 mt-1">
-          {tagsData.map((tagData) => (
-            <div key={tagData}>
+          {tagsData.map((tagData, index) => (
+            <div key={index}>
               <Tag tagName={tagData} />
             </div>
           ))}

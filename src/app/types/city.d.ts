@@ -1,5 +1,4 @@
 export type CityType = {
-  images: string;
   id: string;
   prefecture: string;
   municipality: string;
@@ -11,8 +10,15 @@ export type CityType = {
   displayAvailable: boolean;
   touristAttractions: string;
   nearbyAirport: string;
+  images: CityImages;
   additionalInfoPopulation: string;
   additionalInfoLocalSpecialty: string;
   additionalInfoEvents: string;
   additionalInfoTransport: string;
+};
+
+type CityImage = {
+  images: {
+    src: string;
+  }[];
 };

@@ -10,12 +10,13 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 type Props = {
-  images: string;
+  images: {
+    src: string;
+  }[];
 };
 
 export default function SliderImage(props: Props) {
   const { images } = props;
-  const imageList: { src: string }[] = JSON.parse(images);
 
   const slideSettings = {
     0: {
@@ -51,8 +52,8 @@ export default function SliderImage(props: Props) {
         [&_.slideImage]:aspect-auto
         "
       >
-        {imageList.map((image) => (
-          <SwiperSlide key={image.src}>
+        {images.map((image , index) => (
+          <SwiperSlide key={index}>
             <Image
               className="rounded-xl object-cover h-50"
               src={image.src}
